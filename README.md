@@ -2,17 +2,17 @@
 
 The redis key scheme to access an  object is `{source}:{object}:{id}`
 
-## *source* - data source
+*source* - data source
 
 - mongodb
 - s3
 
-## *object* - either the mongodb collection name or the s3 bucket name
+*object* - either the mongodb collection name or the s3 bucket name
 
 - accounts
 - messages
 
-## *id*
+*id*
 
 This is the unique identifier to retrieve that object with
 
