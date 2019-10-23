@@ -1,0 +1,30 @@
+version: "2"
+services:
+  mongodb:
+    image: mongo:3.4
+  redis:
+    image: redis:latest
+  redis-cache:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    environment:
+      - MONGO_DSN=mongodb://mongodb:27017
+      - MONGO_DATABASE=test
+      - LOGFILE_PATH=application.log
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
+      - AWS_S3_SECURE_MESSAGE_BUCKET_NAME=
+      - REDIS_DSN=redis://redis:6379
+      - EXPIRE_AFTER_SEC=1
+    command: /bin/bash -c 'sleep 10 && python -m unittest discover tests'
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "8005:8005"
+    depends_on:
+    - mongodb
+    - redis
+    links:
+    - mongodb
+    - redis

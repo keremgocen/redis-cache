@@ -1,0 +1,18 @@
+[{
+	"id" : "fokan9ftxm4lpcokzox6asiq",
+	"account_id" : "fokan9ftxm4lpcokzox6asiq",
+	"provider" : "gmail",
+	"created_at" : 1505772888,
+	"object" : "account",
+	"email_address" : "person1@gmail.com",
+	"name" : "Person 1"
+},
+{
+	"id" : "9zh6q76dypghyhqvgb5xwursg",
+	"account_id" : "9zh6q76dypghyhqvgb5xwursg",
+	"provider" : "gmail",
+	"created_at" : 1504633884,
+	"object" : "account",
+	"email_address" : "person2@gmail.com",
+	"name" : "Person 2"
+}]
