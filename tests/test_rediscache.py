@@ -95,7 +95,7 @@ class TestRedisCache(TestBase):
         src = SourceType.MONGODB.value
         obj_type = DocType.MESSAGES.value
         msg_id = '4c5d26zb08qwdcidrboo5zuq9'
-        msg_subject = 'Retest requests center 2'
+        msg_subject = 'test request 2'
         key = RedisCache.fmt_redis_key(src, obj_type, msg_id)
 
         self.assertFalse(self.redis_client.exists(key))
